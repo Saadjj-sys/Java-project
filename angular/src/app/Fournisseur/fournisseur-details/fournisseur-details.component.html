@@ -1,0 +1,18 @@
+<br>
+<h2 class="text-center">Client Details</h2>
+<br>
+
+<div class="container text-center">
+    <div>
+        <label> <b>Client Id: </b></label> {{fournisseur.idFour}}
+    </div>
+    <div>
+        <label> <b>First Name: </b></label> {{fournisseur.nom}}
+    </div>
+    <div>
+        <label> <b>Last Name: </b></label> {{fournisseur.prenom}}
+    </div>
+    <br>
+    <button class="btn btn-warning" (click)="goToFournisseurUpdate(fournisseur.idFour)">Update</button><br>
+    <button class="btn btn-primary" style="margin-top: 5px" (click)="goToFournisseurList()">Return</button>
+</div>

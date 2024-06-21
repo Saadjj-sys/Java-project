@@ -1,0 +1,38 @@
+<br>
+<h2 class="text-center"> Fournisseurs List</h2>
+<br>
+<div class="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col"> Id </th>
+                <th scope="col"> First Name</th>
+                <th scope="col"> Last Name </th>
+                <th scope="col"> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let fournisseur of fournisseurs">
+                <td scope="row"> {{ fournisseur.idFour }} </td>
+                <td> {{ fournisseur.nom }} </td>
+                <td> {{ fournisseur.prenom }} </td>
+                <td>
+                    <button (click)="updateFournisseur(fournisseur.idFour)" class="btn btn-warning">
+                        Update
+                    </button>
+                    <button (click)="deleteFournisseur(fournisseur.idFour)" class="btn btn-danger"
+                        style="margin-left: 10px">
+                        Delete
+                    </button>
+                    <button (click)="fournisseurDetails(fournisseur.idFour)" class="btn btn-success"
+                        style="margin-left: 10px">
+                        View
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="goToAddFournisseur()" class="btn btn-primary" style="margin-left: 1250px">new</button>
+
+</div>
